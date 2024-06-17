@@ -6,7 +6,7 @@ const dotenv = require("dotenv")
 const app = express()
 const Routes = require("./routes/route.js")
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 4000
 
 dotenv.config();
 
@@ -15,6 +15,8 @@ dotenv.config();
 
 app.use(express.json({ limit: '10mb' }))
 app.use(cors())
+
+console.log("BEFORE");
 
 mongoose
     .connect(process.env.MONGO_URL, {

@@ -12,6 +12,7 @@ import {
     getFailed,
     getError,
 } from './userSlice';
+const REACT_APP_BASE_URL = "http://localhost:4000";
 
 export const loginUser = (fields, role) => async (dispatch) => {
     dispatch(authRequest());
